@@ -3,13 +3,18 @@ import { ListaProdutos } from "../components/ListaProdutos";
 import classes from "./Produtos.module.css";
 import {AiFillEdit as Editar} from "react-icons/ai";
 import {RiDeleteBin2Fill as Excluir} from "react-icons/ri";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Produtos() {
 
+  const [counter, setCounter] = useState(0);
   document.title = "Lista de Produtos: " + counter;
 
-  const [counter, setCounter] = useState(0);
+  useEffect(()=>{
+    console.log("Este useEffect renderiza sempre que ocorre alguma atualização no componente!");
+  });
+
+
 
   return (
     <div>
