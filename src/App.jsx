@@ -1,6 +1,5 @@
-
-import Rodape from './components/Rodape'
-import Lista from './components/Lista'
+import Rodape from './components/Rodape';
+import Lista from './components/Lista';
 import { Outlet } from 'react-router-dom';
 
 export default function App(){
@@ -10,8 +9,6 @@ export default function App(){
       <Lista />
         <Outlet/>
       <Rodape />
-      
     </>
   );
-
 }
