@@ -6,7 +6,7 @@ import { AiFillEdit as Editar } from "react-icons/ai";
 import { RiDeleteBin2Fill as Excluir } from "react-icons/ri";
 import AdicionarProduto from "./AdicionarProdutos";
 
-export default function Produtos() {
+function Produtos() {
   const [produtos, setProdutos] = useState(ListaProdutos);
 
   const adicionarProduto = (novoProduto) => {
@@ -64,3 +64,5 @@ export default function Produtos() {
     </div>
   );
 }
+
+export default Produtos

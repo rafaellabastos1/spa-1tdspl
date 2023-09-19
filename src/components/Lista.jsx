@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Cabecalho from "./Cabecalho";
 
-export default function Lista() {
+function Lista() {
   return (
     <>
       <Cabecalho>
@@ -15,3 +15,5 @@ export default function Lista() {
     </>
   );
 }
+
+export default Lista

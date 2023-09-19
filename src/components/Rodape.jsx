@@ -1,4 +1,4 @@
-export default function Rodape() {
+function Rodape() {
   return (
       <>
         <footer>
@@ -20,3 +20,5 @@ export default function Rodape() {
       </>
     )
   }
+
+  export default Rodape

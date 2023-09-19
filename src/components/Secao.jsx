@@ -1,7 +1,7 @@
 import reactLogo from '../assets/react.svg'
 import Rodape from './Rodape'
 
-export default function Secao(props) {
+function Secao(props) {
   let reactAlt = 'React Logo'
 
   return(
@@ -37,3 +37,5 @@ export default function Secao(props) {
       </>
   ) 
 } 
+
+export default Secao

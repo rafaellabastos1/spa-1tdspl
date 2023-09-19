@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { ListaProdutos } from "../components/ListaProdutos";
 import { useState } from "react";
 
-export default function EditarProdutos() {
+function EditarProdutos() {
 
   document.title = "Editar Produtos";
 
@@ -80,3 +80,5 @@ export default function EditarProdutos() {
       </div>
   )
 }
+
+export default EditarProdutos
