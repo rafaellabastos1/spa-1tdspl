@@ -2,14 +2,17 @@ import { useNavigate, useParams } from "react-router-dom";
 import { ListaProdutos } from "../components/ListaProdutos";
 import { useState } from "react";
 
-function EditarProdutos() {
+export default function EditarProdutos() {
 
   document.title = "Editar Produtos";
 
+  //Criando um mecanismo de navegação com useNavigate()
   const navigate = useNavigate();
 
+  //Receber o ID do produto pelo HOOK useParams( );
   const {id} = useParams();
 
+  //Recuperar o produto na lista pelo ID.
   const produtoRecuperado = ListaProdutos.filter( produto => produto.id == id );
 
   const [produto,setProduto] = useState({
@@ -21,8 +24,12 @@ function EditarProdutos() {
   });
 
   const handleChange = (event) =>{
-
+  
+    //Executando uma desestruturação no elemento que disparou a ação.
     const {name, value} = event.target;
+
+    //Utilizando as propriedades desestruturadas eu vou setar elas no objeto produto
+    // utilizando o SPREAD.
     setProduto({...produto,[name]:value});
   }
   
@@ -77,8 +84,8 @@ function EditarProdutos() {
             <p>Desc: {produto.desc}</p>
             <p>Preço: {produto.preco}</p>
           </div>
+
+
       </div>
   )
 }
-
-export default EditarProdutos

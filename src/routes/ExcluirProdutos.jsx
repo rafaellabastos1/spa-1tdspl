@@ -2,13 +2,15 @@ import { useNavigate, useParams } from "react-router-dom";
 import { ListaProdutos } from "../components/ListaProdutos";
 import style from "./ExcluirProdutos.module.css";
 
-function ExcluirProdutos() {
+export default function ExcluirProdutos() {
   document.title = "Excluir Produtos";
 
   const navigate = useNavigate();
 
+  //Receber o ID do produto pelo HOOK useParams( );
   const { id } = useParams();
 
+  //Recuperar o produto na lista pelo ID.
   const produto = ListaProdutos.filter((produto) => produto.id == id)[0];
 
   const handleDelete = (event) => {
@@ -41,9 +43,8 @@ function ExcluirProdutos() {
                 <button onClick={()=> navigate("/produtos")}>CANCELAR</button>
             </div>
         </div>
+
       </div>
     </>
   );
 }
-
-export default ExcluirProdutos

@@ -1,16 +1,17 @@
-import Rodape from './components/Rodape';
-import Lista from './components/Lista';
+
+import Rodape from './components/Rodape'
+import Lista from './components/Lista'
 import { Outlet } from 'react-router-dom';
 
-function App(){
+export default function App(){
 
   return(
     <>
       <Lista />
         <Outlet/>
       <Rodape />
+      
     </>
   );
-}
 
-export default App
+}

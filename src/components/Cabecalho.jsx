@@ -1,10 +1,10 @@
 import { createElement } from "react";
 
-function Cabecalho(props) {
+export default function Cabecalho(props) {
   return (
     <>
       <header>
-        <h1>Vite + React / coded by Technobike</h1>
+        <h1>Vite + React / coded by Rafa Bastos</h1>
         <ul>
           {props.children.map((item, indice) => {
             createElement("li", { key: indice }, item);
@@ -15,5 +15,3 @@ function Cabecalho(props) {
     </>
   );
 }
-
-export default Cabecalho
